@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  background-color: #eee;
+}
+
+header {
+  background-color: #ccc;
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+label {
+  font-weight: 100;
+  font-size: 22px;
+}
+
+input {
+  width: 60px;
+  border: none;
+  outline: none;
+  padding: 2px;
+  font-size: 22px;
+  font-family: inherit;
+  border-radius: 7px;
+  background-color: #ded;
+}
+
+#progress_total {
+  width: 60px;
+  font-size: 22px;
+  color: #555;
+}
+
+header button {
+  border: 0;
+  outline: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 5px;
+  background-color: #ded;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+main {
+  font-size: 40px;
+  display: grid;
+  grid: repeat(9, 60px) / 1fr;
+  align-items: center;
+  justify-items: center;
+  overflow: hidden;
+}
+
+.num {
+  margin: 7px 0;
+  position: relative;
+  width: 120px;
+  text-align: center;
+}
+
+.num-n1,
+.num-n2,
+.num-n3,
+.num-n4 {
+  color: #888;
+}
+
+.num-0 {
+  border: 3px solid darkred;
+  margin: 10px 0;
+  padding: 5px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.num-n4::after,
+.num-p4::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #eee;
+  z-index: 10;
+}
+
+.num-n4::after {
+  top: -14px;
+  height: calc(100% + 14px);
+  background: linear-gradient(180deg, #eee, transparent);
+}
+
+.num-p4::after {
+  background: linear-gradient(0deg, #eee, #eeeeeeaa, transparent);
+}
+
+main .num span {
+  display: block;
+  transform: translateY(0);
+  transition: transform 1s ease-in-out;
+}
+
+main.flow .num span {
+  transform: translateY(-60px);
+}
+
+.buttons button {
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background-color: #ded;
+  color: black;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  margin: 0 10px;
+}
+
+button:hover {
+  background-color: #efe;
+  color: darkred;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.buttons button.active {
+  background-color: #ffcbcb;
+  color: darkred;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 5px 0px rgba(255, 0, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 10px 2px rgba(255, 0, 0, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 5px 0px rgba(255, 0, 0, 0.5);
+  }
+}
