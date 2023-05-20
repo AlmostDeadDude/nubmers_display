@@ -102,7 +102,6 @@ function adjust_wrappers_height() {
         wrapper.style.width = parentBox.width + 'px';
         wrapper.style.height = parentBox.height + 'px';
         console.log(`%cwidth:${parentBox.width}, height:${parentBox.height}`, 'color:green');
-        alert(`width:${parentBox.width}, height:${parentBox.height}`);
     });
 }
 //adjust when window is resized

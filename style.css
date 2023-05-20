@@ -85,9 +85,9 @@ header button {
 }
 
 main {
-  font-size: 40px;
+  font-size: 35px;
   display: grid;
-  grid: repeat(9, 60px) / 1fr;
+  grid: repeat(9, 50px) / 1fr;
   align-items: center;
   justify-items: center;
   /* overflow: hidden; */
@@ -145,7 +145,7 @@ main .num span {
 }
 
 main.flow .num span {
-  transform: translateY(-60px);
+  transform: translateY(-50px);
 }
 
 .buttons button {
