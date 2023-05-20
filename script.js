@@ -100,7 +100,7 @@ function adjust_wrappers_height() {
     document.querySelectorAll('.wrapper').forEach(function (wrapper) {
         let parentBox = wrapper.parentElement.getBoundingClientRect();
         wrapper.style.width = parentBox.width + 'px';
-        wrapper.style.height = parentBox.height + 'px';
+        wrapper.style.height = parentBox.height - 100 + 'px';
         console.log(`%cwidth:${parentBox.width}, height:${parentBox.height}`, 'color:green');
     });
 }
