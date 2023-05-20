@@ -90,22 +90,22 @@ function moveDown() {
     localStorage.setItem('numbers_display-currentStep', currentStep);
 }
 
-//adjust wrapper height
-function adjust_wrappers_height() {
-    // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-    let vh = window.innerHeight * 0.01;
-    // Then we set the value in the --vh custom property to the root of the document
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
+// //adjust wrapper height
+// function adjust_wrappers_height() {
+//     // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+//     let vh = window.innerHeight * 0.01;
+//     // Then we set the value in the --vh custom property to the root of the document
+//     document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-    document.querySelectorAll('.wrapper').forEach(function (wrapper) {
-        let parentBox = wrapper.parentElement.getBoundingClientRect();
-        wrapper.style.width = parentBox.width + 'px';
-        wrapper.style.height = parentBox.height - 100 + 'px';
-        console.log(`%cwidth:${parentBox.width}, height:${parentBox.height}`, 'color:green');
-    });
-}
-//adjust when window is resized
-window.addEventListener('resize', adjust_wrappers_height);
+//     document.querySelectorAll('.wrapper').forEach(function (wrapper) {
+//         let parentBox = wrapper.parentElement.getBoundingClientRect();
+//         wrapper.style.width = parentBox.width + 'px';
+//         wrapper.style.height = parentBox.height + 'px';
+//         console.log(`%cwidth:${parentBox.width}, height:${parentBox.height}`, 'color:green');
+//     });
+// }
+// //adjust when window is resized
+// window.addEventListener('resize', adjust_wrappers_height);
 
-//adjust when window is loaded
-adjust_wrappers_height();
+// //adjust when window is loaded
+// adjust_wrappers_height();
