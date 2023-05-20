@@ -17,7 +17,7 @@ $numbers = explode(',', $numbers);
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://kit.fontawesome.com/d6065b6a9b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
-    <title>My Project</title>
+    <title>String Art Numbers</title>
 </head>
 
 <body>
